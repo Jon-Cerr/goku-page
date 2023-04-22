@@ -1,0 +1,434 @@
+:root {
+  --font-family: "Poppins";
+  --alternate-font: sans-serif;
+  --font-size: 16px;
+  --primary-color: rgb(239, 129, 68);
+  --secondary-color: rgb(0, 0, 0);
+  --bg-color: rgb(255, 255, 255);
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--alternate-font);
+  font-size: var(--font-size);
+}
+
+span {
+  color: var(--primary-color);
+}
+
+.hero__container {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+  background-image: url("../assets/img/5-star-dragonball.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: 110% -40%;
+}
+
+.hero__content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero__content p {
+  top: 15%;
+  left: 22%;
+  position: absolute;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.hero__content p span {
+  color: var(--primary-color);
+}
+
+.hero__title {
+  display: flex;
+  font-size: 15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hero__img {
+  position: absolute;
+  width: 300px;
+}
+
+.hero__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.info__container {
+  max-width: 992px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.info__title,
+.goku__title,
+.about__title,
+.forms__title,
+.fight__title,
+.shenron__title,
+.footer__title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.info__title {
+  position: relative;
+}
+
+.info__title::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "9";
+  color: var(--primary-color);
+  font-size: 8rem;
+  margin: 0 auto;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.goku__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.goku__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-basis: 60%;
+}
+
+.goku__img {
+  flex-basis: 40%;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.goku__img img {
+  max-width: 80%;
+  object-fit: cover;
+}
+
+.goku__description p,
+.about__description,
+.forms__info,
+.fight__description,
+.shenron__description {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.about__features,
+.about__info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__info {
+  flex-direction: column;
+}
+
+.about__description {
+  position: relative;
+  width: 70%;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.about__description::before,
+.fight__description::before,
+.shenron__description::before,
+.forms__info::before {
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  content: "";
+  width: 20%;
+  margin-top: 20rem;
+  border-radius: 10px;
+  border-bottom: 0.3rem solid var(--primary-color);
+  transform: translate(-50%, -50%);
+}
+
+.about__features {
+  max-width: 600px;
+}
+
+.about__img,
+.features__description {
+  flex-basis: 50%;
+}
+
+.about__img img {
+  max-width: 100%;
+}
+
+.features__description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.features__description li {
+  list-style: none;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.forms__content {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.forms__description {
+  text-align: center;
+}
+
+.forms__info {
+  text-align: center;
+}
+
+.card-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 380px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+}
+
+.fight__info,
+.shenron__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fight__info {
+  background-image: url("../assets/img/logo-dbz.png");
+  background-repeat: no-repeat;
+  background-position: center 200px;
+}
+
+.fight__description {
+  width: 80%;
+  padding-top: 1rem;
+}
+
+.fight__img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.shenron__info {
+  gap: 3rem;
+  background-image: url("../assets/img/dragon-balls.png");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center 100%;
+}
+
+.shenron__img {
+  width: 50%;
+}
+
+.footer__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem 10% 0;
+  background-color: var(--secondary-color);
+}
+
+.footer__container img {
+  width: 20%;
+  filter: invert(1);
+}
+
+.footer__title {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: initial;
+}
+
+.footer__author {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.footer__author p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer__media {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.media__link {
+  list-style: none;
+  text-decoration: none;
+}
+
+.media__link a {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__container {
+    background-size: 70%;
+    background-position: 150% -10%;
+  }
+
+  .hero__title {
+    font-size: 15vh;
+  }
+  .hero__content p {
+    display: none;
+  }
+
+  .info__title {
+    text-align: center;
+  }
+
+  .about__title {
+    text-align: center;
+  }
+
+  .goku__info {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .goku__description,
+  .forms__info {
+    padding: 0.5rem 1rem;
+  }
+
+  .card-container {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .fight__info {
+   background-image: none;
+  }
+
+  .fight__title {
+    font-size: 1.8rem;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
+
+  .footer__title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .footer__author p {
+    font-size: 1rem;
+  }
+
+  .about__description::before,
+  .fight__description::before,
+  .shenron__description::before,
+  .forms__info::before {
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    content: "";
+    width: 20%;
+    border-radius: 10px;
+    border-bottom: 0.3rem solid var(--primary-color);
+    transform: translate(-50%, -50%);
+  }
+}
